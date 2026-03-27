@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>茶农端 - 紫金蝉茶全链数智服务平台</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="farmer">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-badge">茶</div>
+        <div class="brand-text">
+          紫金蝉茶全链数智服务平台
+          <small>茶农端</small>
+        </div>
+      </div>
+      <div class="top-actions">
+        <div class="point-chip">积分：<span class="js-point-value">0</span></div>
+        <button class="btn btn-outline" data-open-intro>平台简介</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-box" style="--hero-image:url('images/farmer-hero.jpg')">
+          <div class="hero-content">
+            <div class="hero-tag">农事记录 · 虫口监测 · 技术答疑</div>
+            <h1>茶农端</h1>
+            <p>围绕简易化、高效化记录与茶园监测，提升茶农日常生产管理效率。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>茶园监测数据</h2>
+        </div>
+
+        <div class="sensor-grid">
+          <div class="sensor">
+            <strong>21.6℃</strong>
+            <span>空气温度</span>
+          </div>
+          <div class="sensor">
+            <strong>68%</strong>
+            <span>空气湿度</span>
+          </div>
+          <div class="sensor">
+            <strong>6.8</strong>
+            <span>土壤 pH</span>
+          </div>
+          <div class="sensor">
+            <strong>Ⅰ类</strong>
+            <span>水质等级</span>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top:18px;">
+          <div class="card">
+            <h3 class="mini-title">虫口监测上报</h3>
+            <div class="field">
+              <label for="pestValue">监测内容</label>
+              <input class="input" id="pestValue" placeholder="例如：轻度 / 中度 / 每百梢12头" />
+            </div>
+            <div class="top-actions" style="justify-content:flex-start;">
+              <button class="btn btn-primary" id="btnPest">立即上报</button>
+            </div>
+          </div>
+
+          <div class="card-image">
+            <img src="images/garden.jpg" alt="茶园">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="mini-title">农事记录</h3>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="farmWeather">天气</label>
+                <select class="select" id="farmWeather">
+                  <option value="晴">晴</option>
+                  <option value="多云">多云</option>
+                  <option value="小雨">小雨</option>
+                  <option value="阴">阴</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="farmType">采摘品类</label>
+                <select class="select" id="farmType">
+                  <option value="红茶鲜叶">红茶鲜叶</option>
+                  <option value="绿茶鲜叶">绿茶鲜叶</option>
+                  <option value="乌龙茶鲜叶">乌龙茶鲜叶</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="farmFertilizer">施肥类型</label>
+                <input class="input" id="farmFertilizer" placeholder="例如：有机肥 / 未施肥" />
+              </div>
+
+              <div class="field">
+                <label for="farmPicker">记录人</label>
+                <input class="input" id="farmPicker" placeholder="例如：李师傅" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="farmNote">补充说明</label>
+              <textarea class="textarea" id="farmNote" placeholder="记录采摘标准、叶质、虫咬程度等信息"></textarea>
+            </div>
+
+            <div class="field">
+              <label for="farmPhoto">拍照上传</label>
+              <input class="input" id="farmPhoto" type="file" />
+            </div>
+
+            <div class="top-actions" style="justify-content:flex-start;">
+              <button class="btn btn-primary" id="btnFarmSubmit">提交记录</button>
+              <button class="btn btn-outline" id="btnVoiceRecord">语音录入</button>
+              <button class="btn btn-outline" id="btnFarmDemo">填充示例</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="mini-title">已提交记录</h3>
+            <div class="record-list" id="farmRecordList"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+          <div class="card-image">
+            <img src="images/picking.jpg" alt="采茶">
+          </div>
+
+          <div class="card">
+            <h3 class="mini-title">农业技术答疑</h3>
+
+            <div class="field">
+              <label for="qaQuestion">输入问题</label>
+              <textarea class="textarea" id="qaQuestion" placeholder="例如：雨后采摘对蝉茶品质有何影响？"></textarea>
+            </div>
+
+            <div class="top-actions" style="justify-content:flex-start;">
+              <button class="btn btn-primary" id="btnAsk">提交问题</button>
+              <button class="btn btn-outline" id="btnFillQa">填充问题</button>
+            </div>
+
+            <div class="qa-list" id="qaList"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-title">茶农端</div>
+      <p>农事记录更便捷，监测上报更高效，问题解答更及时。</p>
+      <div class="top-actions" style="margin-top:12px;">
+        <button class="btn btn-outline" data-scroll-top>返回顶部</button>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="tabbar">
+    <div class="tabbar-inner">
+      <a href="index.html">首页</a>
+      <a href="consumer.html">消费端</a>
+      <a href="farmer.html" class="active">茶农端</a>
+      <a href="enterprise.html">茶企端</a>
+      <a href="government.html">政府端</a>
+    </div>
+  </nav>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <strong id="modalTitle">提示</strong>
+        <button class="modal-close" id="modalClose">×</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

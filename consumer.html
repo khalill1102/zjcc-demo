@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>消费端 - 紫金蝉茶全链数智服务平台</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="consumer">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-badge">茶</div>
+        <div class="brand-text">
+          紫金蝉茶全链数智服务平台
+          <small>消费端</small>
+        </div>
+      </div>
+      <div class="top-actions">
+        <div class="point-chip">积分：<span class="js-point-value">0</span></div>
+        <button class="btn btn-outline" data-open-intro>平台简介</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-box" style="--hero-image:url('images/consumer-hero.jpg')">
+          <div class="hero-content">
+            <div class="hero-tag">互动 · 溯源 · 消费 · 分享</div>
+            <h1>消费端</h1>
+            <p>
+              承接用户互动体验流量，提供采茶制茶模拟、溯源查询、线上购买、茶旅预约与品茗分享。
+            </p>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>55.63%</strong>
+            <span>偏好互动体验</span>
+          </div>
+          <div class="stat">
+            <strong>73.13%</strong>
+            <span>愿记录品茗感受</span>
+          </div>
+          <div class="stat">
+            <strong>100元内</strong>
+            <span>50g装主流接受价位</span>
+          </div>
+          <div class="stat">
+            <strong>积分制</strong>
+            <span>提升活跃与复购</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="mini-title">互动采茶 / 制茶体验</h3>
+            <p class="subtle">完成流程可累积积分。</p>
+
+            <div class="step-row">
+              <button class="step-btn" data-step="采摘鲜叶">① 采摘鲜叶</button>
+              <button class="step-btn" data-step="摊青凉青">② 摊青凉青</button>
+              <button class="step-btn" data-step="揉捻做形">③ 揉捻做形</button>
+              <button class="step-btn" data-step="烘干提香">④ 烘干提香</button>
+            </div>
+
+            <div class="progress">
+              <div class="progress-bar" id="simulateBar"></div>
+            </div>
+
+            <div class="result-box" id="simulateText">点击步骤开始体验采茶制茶流程。</div>
+
+            <div class="top-actions" style="margin-top:12px; justify-content:flex-start;">
+              <button class="btn btn-primary" id="btnCompleteSim">一键完成</button>
+              <button class="btn btn-outline" id="btnResetSim">重置</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="mini-title">蝉茶知识答题</h3>
+            <p class="subtle">参与答题可获得积分奖励。</p>
+
+            <strong>题目：</strong>紫金蝉茶独特蜜香的重要来源是？
+            <div class="quiz-options">
+              <button class="quiz-option" data-correct="false" data-explain="这个答案不准确。紫金蝉茶的核心风味与小绿叶蝉叮咬诱导形成的香气物质相关。">
+                A. 纯人工加香
+              </button>
+              <button class="quiz-option" data-correct="true" data-explain="回答正确：小绿叶蝉叮咬后，茶叶会形成更独特的蜜香、花果香等风味特征。">
+                B. 小绿叶蝉叮咬诱导形成香气物质
+              </button>
+              <button class="quiz-option" data-correct="false" data-explain="这个答案不准确。发酵工艺重要，但不是该蜜香形成的核心来源。">
+                C. 只靠高温发酵
+              </button>
+            </div>
+            <div class="result-box" id="quizResult">请选择一个答案。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="mini-title">茶叶溯源查询</h3>
+
+            <div class="trace-box">
+              <div class="field">
+                <label for="traceCode">溯源码</label>
+                <input class="input" id="traceCode" value="ZJCC-2025-0818-001" />
+              </div>
+              <div class="top-actions" style="justify-content:flex-start;">
+                <button class="btn btn-primary" id="btnTrace">立即查询</button>
+                <button class="btn btn-outline" id="btnRandomTrace">随机生成</button>
+              </div>
+              <div class="result-box" id="traceResult">
+                点击“立即查询”后查看茶园生态、采摘等级、制作批次、制茶师等信息。
+              </div>
+            </div>
+          </div>
+
+          <div class="card-image">
+            <img src="images/trace.jpg" alt="溯源">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>商城与预约</h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="product">
+            <img src="images/product-red.jpg" alt="红茶">
+            <div class="product-body">
+              <h3>紫金蝉茶 · 红茶 50g</h3>
+              <div class="price">¥98</div>
+              <p class="subtle">蜜香明显，适合送礼和品鉴。</p>
+              <div class="pill-row">
+                <span class="pill">50g装</span>
+                <span class="pill">蜜香型</span>
+              </div>
+              <div style="margin-top:12px;">
+                <button class="btn btn-primary btn-block buy-btn" data-name="紫金蝉茶·红茶 50g">加入购物车</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="images/product-green.jpg" alt="绿茶">
+            <div class="product-body">
+              <h3>紫金蝉茶 · 绿茶 50g</h3>
+              <div class="price">¥88</div>
+              <p class="subtle">清鲜明快，适合日常饮用。</p>
+              <div class="pill-row">
+                <span class="pill">50g装</span>
+                <span class="pill">清香型</span>
+              </div>
+              <div style="margin-top:12px;">
+                <button class="btn btn-primary btn-block buy-btn" data-name="紫金蝉茶·绿茶 50g">加入购物车</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="images/tea-tour.jpg" alt="茶旅">
+            <div class="product-body">
+              <h3>茶园研学 / 茶旅体验</h3>
+              <div class="price">¥69 起</div>
+              <p class="subtle">支持线上预约，打通茶旅体验与品牌消费。</p>
+
+              <div class="field">
+                <label for="bookingDate">预约日期</label>
+                <input class="input" id="bookingDate" type="date" />
+              </div>
+
+              <button class="btn btn-outline btn-block" id="btnBooking">提交预约</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="mini-title">品茗体验分享</h3>
+
+            <div class="field">
+              <label for="shareName">昵称</label>
+              <input class="input" id="shareName" placeholder="例如：茶香旅人" />
+            </div>
+
+            <div class="field">
+              <label for="shareText">分享内容</label>
+              <textarea class="textarea" id="shareText" placeholder="写下你的品茗感受、香气体验、冲泡心得……"></textarea>
+            </div>
+
+            <div class="top-actions" style="justify-content:flex-start;">
+              <button class="btn btn-primary" id="btnShare">发布分享</button>
+              <button class="btn btn-outline" id="btnFillShare">填充示例</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="mini-title">最新分享</h3>
+            <div class="feed-list" id="shareList"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-title">消费端</div>
+      <p>互动体验、溯源信任、轻量消费、社交分享。</p>
+      <div class="top-actions" style="margin-top:12px;">
+        <button class="btn btn-outline" data-scroll-top>返回顶部</button>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="tabbar">
+    <div class="tabbar-inner">
+      <a href="index.html">首页</a>
+      <a href="consumer.html" class="active">消费端</a>
+      <a href="farmer.html">茶农端</a>
+      <a href="enterprise.html">茶企端</a>
+      <a href="government.html">政府端</a>
+    </div>
+  </nav>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <strong id="modalTitle">提示</strong>
+        <button class="modal-close" id="modalClose">×</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

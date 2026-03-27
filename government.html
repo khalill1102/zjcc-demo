@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>政府端 - 紫金蝉茶全链数智服务平台</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="government">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-badge">茶</div>
+        <div class="brand-text">
+          紫金蝉茶全链数智服务平台
+          <small>政府端</small>
+        </div>
+      </div>
+      <div class="top-actions">
+        <div class="point-chip">积分：<span class="js-point-value">0</span></div>
+        <button class="btn btn-outline" data-open-intro>平台简介</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-box" style="--hero-image:url('images/government-hero.jpg')">
+          <div class="hero-content">
+            <div class="hero-tag">监管总览 · 协同支撑 · 数据回传</div>
+            <h1>政府端</h1>
+            <p>围绕监管、协同、服务和推广，形成产业运行可视化与数据支撑体系。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>监管总览</h2>
+        </div>
+
+        <div class="metric-grid">
+          <div class="metric">
+            <strong>186</strong>
+            <span>农事记录总数</span>
+          </div>
+          <div class="metric">
+            <strong>28</strong>
+            <span>接入茶园点位</span>
+          </div>
+          <div class="metric">
+            <strong>12</strong>
+            <span>活跃茶企</span>
+          </div>
+          <div class="metric">
+            <strong>97%</strong>
+            <span>数据回传率</span>
+          </div>
+        </div>
+
+        <div class="top-actions" style="margin-top:18px; justify-content:flex-start;">
+          <button class="btn btn-primary" id="refreshGov">刷新数据</button>
+          <button class="btn btn-outline" id="exportGov">生成报表</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="mini-title">运行状态</h3>
+            <div class="gov-list">
+              <div class="gov-item">
+                <div>
+                  <strong>茶园生态数据回传</strong><br>
+                  <span class="subtle">空气、土壤、水质、虫口监测等基础数据持续上传</span>
+                </div>
+                <span class="status ok">正常</span>
+              </div>
+
+              <div class="gov-item">
+                <div>
+                  <strong>农事记录规范性检查</strong><br>
+                  <span class="subtle">支持检查茶农记录完整性，提升台账管理效率</span>
+                </div>
+                <span class="status warn">待抽检</span>
+              </div>
+
+              <div class="gov-item">
+                <div>
+                  <strong>溯源体系接入情况</strong><br>
+                  <span class="subtle">支持批次追踪、生态数据展示、制茶信息归集</span>
+                </div>
+                <span class="status ok">已接入</span>
+              </div>
+
+              <div class="gov-item">
+                <div>
+                  <strong>茶企活动备案</strong><br>
+                  <span class="subtle">品牌活动、品鉴会、茶旅活动统一登记</span>
+                </div>
+                <span class="status wait">处理中</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-image">
+            <img src="images/dashboard.jpg" alt="监管看板">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="mini-title">协同支撑体系</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot">校</div>
+                <div><strong>高校支撑</strong><br><span class="subtle">开展平台开发、功能优化、数据接口升级。</span></div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot">研</div>
+                <div><strong>农科支撑</strong><br><span class="subtle">提供种植指导、质量提升、技术咨询与培训服务。</span></div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot">政</div>
+                <div><strong>政策支撑</strong><br><span class="subtle">推动开发、组织培训、统筹推广、引导规范使用。</span></div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot">企</div>
+                <div><strong>产业共建</strong><br><span class="subtle">茶企共同参与内容运营、活动落地、品牌推广。</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="mini-title">阶段成效</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot">效</div>
+                <div><strong>消费体验升级</strong><br><span class="subtle">增强年轻客群互动意愿，提升信任与转化。</span></div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot">提</div>
+                <div><strong>生产效率提升</strong><br><span class="subtle">优化茶农记录方式，增强数据回传与管理效率。</span></div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot">优</div>
+                <div><strong>运营结构优化</strong><br><span class="subtle">帮助茶企实现产销匹配、品牌传播和活动转化。</span></div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot">促</div>
+                <div><strong>产业协同增强</strong><br><span class="subtle">推动种植、生产、销售、体验全链联动。</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-title">政府端</div>
+      <p>强化数据监管、协同支撑与产业服务，助力紫金蝉茶高质量发展。</p>
+      <div class="top-actions" style="margin-top:12px;">
+        <button class="btn btn-outline" data-scroll-top>返回顶部</button>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="tabbar">
+    <div class="tabbar-inner">
+      <a href="index.html">首页</a>
+      <a href="consumer.html">消费端</a>
+      <a href="farmer.html">茶农端</a>
+      <a href="enterprise.html">茶企端</a>
+      <a href="government.html" class="active">政府端</a>
+    </div>
+  </nav>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <strong id="modalTitle">提示</strong>
+        <button class="modal-close" id="modalClose">×</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

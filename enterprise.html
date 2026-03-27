@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>茶企端 - 紫金蝉茶全链数智服务平台</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="enterprise">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-badge">茶</div>
+        <div class="brand-text">
+          紫金蝉茶全链数智服务平台
+          <small>茶企端</small>
+        </div>
+      </div>
+      <div class="top-actions">
+        <div class="point-chip">积分：<span class="js-point-value">0</span></div>
+        <button class="btn btn-outline" data-open-intro>平台简介</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-box" style="--hero-image:url('images/enterprise-hero.jpg')">
+          <div class="hero-content">
+            <div class="hero-tag">经营看板 · 产销对接 · 品牌运营</div>
+            <h1>茶企端</h1>
+            <p>围绕提效、对接、运营三大方向，打通种植、生产、销售和品牌传播环节。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>经营看板</h2>
+        </div>
+
+        <div class="metric-grid">
+          <div class="metric">
+            <strong>1,280kg</strong>
+            <span>本周鲜叶入厂</span>
+          </div>
+          <div class="metric">
+            <strong>82%</strong>
+            <span>产能利用率</span>
+          </div>
+          <div class="metric">
+            <strong>436</strong>
+            <span>线上订单数</span>
+          </div>
+          <div class="metric">
+            <strong>¥12.8万</strong>
+            <span>预估成交额</span>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top:18px;">
+          <div class="card">
+            <h3 class="mini-title">品类表现</h3>
+            <div class="bar-list">
+              <div class="bar-item">
+                <span>红茶</span>
+                <div class="bar-track"><div class="bar-fill" style="width:78%"></div></div>
+                <strong>78%</strong>
+              </div>
+              <div class="bar-item">
+                <span>绿茶</span>
+                <div class="bar-track"><div class="bar-fill" style="width:52%"></div></div>
+                <strong>52%</strong>
+              </div>
+              <div class="bar-item">
+                <span>乌龙</span>
+                <div class="bar-track"><div class="bar-fill" style="width:66%"></div></div>
+                <strong>66%</strong>
+              </div>
+              <div class="bar-item">
+                <span>茶旅</span>
+                <div class="bar-track"><div class="bar-fill" style="width:41%"></div></div>
+                <strong>41%</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-image">
+            <img src="images/dashboard.jpg" alt="看板">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="mini-title">产销匹配</h3>
+
+            <div class="field">
+              <label for="matchDemand">客户需求</label>
+              <textarea class="textarea" id="matchDemand" placeholder="例如：需要50g装红茶礼盒500份，预算控制在100元内，适合中秋活动送礼。"></textarea>
+            </div>
+
+            <div class="top-actions" style="justify-content:flex-start;">
+              <button class="btn btn-primary" id="btnMatch">生成匹配建议</button>
+              <button class="btn btn-outline" id="btnMatchFill">填充需求</button>
+            </div>
+
+            <div class="result-box" id="matchResult">
+              输入客户需求后，系统将生成产品推荐、报价区间和可承接量建议。
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="mini-title">运营建议</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot">数</div>
+                <div><strong>用户偏好</strong><br><span class="subtle">当前红茶浏览热度较高，礼盒产品点击率更高。</span></div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot">策</div>
+                <div><strong>推荐打法</strong><br><span class="subtle">主推50g轻量装，叠加积分、茶旅券、品牌故事卡组合。</span></div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot">联</div>
+                <div><strong>联动资源</strong><br><span class="subtle">可结合活动、茶旅、研学、节庆礼赠共同推广。</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="mini-title">品牌动态发布</h3>
+
+            <div class="field">
+              <label for="newsTitle">动态标题</label>
+              <input class="input" id="newsTitle" placeholder="例如：紫金蝉茶秋季品鉴会开始预约" />
+            </div>
+
+            <div class="field">
+              <label for="newsText">动态内容</label>
+              <textarea class="textarea" id="newsText" placeholder="填写活动亮点、产品信息或品牌内容"></textarea>
+            </div>
+
+            <div class="top-actions" style="justify-content:flex-start;">
+              <button class="btn btn-primary" id="btnPublishNews">发布动态</button>
+              <button class="btn btn-outline" id="btnFillNews">填充示例</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="mini-title">已发布动态</h3>
+            <div class="news-list" id="newsList"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-title">茶企端</div>
+      <p>提升运营效率，打通产销对接，强化品牌私域传播。</p>
+      <div class="top-actions" style="margin-top:12px;">
+        <button class="btn btn-outline" data-scroll-top>返回顶部</button>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="tabbar">
+    <div class="tabbar-inner">
+      <a href="index.html">首页</a>
+      <a href="consumer.html">消费端</a>
+      <a href="farmer.html">茶农端</a>
+      <a href="enterprise.html" class="active">茶企端</a>
+      <a href="government.html">政府端</a>
+    </div>
+  </nav>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <strong id="modalTitle">提示</strong>
+        <button class="modal-close" id="modalClose">×</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
